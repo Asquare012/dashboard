@@ -1,0 +1,71 @@
+.Orders-container {
+    height: 100%;
+    margin: 0 2%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding-left: 2%;
+
+    .Container-title {
+        height: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: bold;
+        font-size: 13px;
+        padding-right: 7%;
+
+        div {
+            &:last-child {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .Container-table {
+        height: 85%;
+
+        table {
+            height: 100%;
+            width: 100%;
+
+            th {
+                text-align: left;
+                color: #9CA4AB;
+            }
+
+            td {
+
+                &:first-child,
+                &:last-child {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    cursor: pointer;
+
+                    img {
+                        margin-right: 5px;
+                    }
+                }
+
+                &:nth-child(2) {
+                    color: #737373;
+                }
+
+                &:nth-child(3) {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:400px) {
+    .Orders-container {
+        height: 400px;
+        overflow: scroll;
+
+        .Container-table {
+            width: 400px;
+        }
+    }
+}

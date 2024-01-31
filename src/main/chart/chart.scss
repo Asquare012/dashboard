@@ -1,0 +1,64 @@
+.Charts-container {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #ffffff;
+
+
+    .Chart-title {
+        height: 10%;
+        display: flex;
+        padding: 0 1%;
+        font-weight: bold;
+        font-size: 13px;
+
+        div {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            &:last-child {
+                cursor: pointer;
+                font-weight: lighter;
+            }
+        }
+
+        .Title-right {
+            justify-content: flex-end;
+
+            span {
+                display: flex;
+                align-items: center;
+                border: 1px solid #DADDDD;
+                padding: 1px 4px;
+                border-radius: 25px;
+                margin-left: 5px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .Chart-section {
+        height: 90%;
+
+        .chart-box {
+            height: 100%;
+
+            .row {
+                height: 100%;
+            }
+
+            .mixed-chart {
+                height: 100%;
+            }
+        }
+    }
+}
+
+// mobile
+@media screen and (max-width:425px) {
+    .Charts-container {
+        height: 50vh;
+    }
+}

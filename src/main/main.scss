@@ -1,0 +1,124 @@
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    background-color: #f6f6f6;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+    .Main-left {
+        width: 5%;
+        border-right: 1px solid #DADDDD;
+    }
+
+    .Main-right {
+        width: 95%;
+
+        .Right-top {
+            height: 10%;
+        }
+
+        .Right-center {
+            height: 50%;
+            display: flex;
+            margin: 10px 0 10px 1%;
+
+            .Charts {
+                width: 60%;
+                height: 100%;
+            }
+
+            .Stats {
+                width: 40%;
+                height: 100%;
+            }
+        }
+
+        .Right-bottom {
+            height: 40%;
+            display: flex;
+
+            .Orders {
+                width: 60%;
+                height: 100%;
+            }
+
+            .Platforms {
+                width: 40%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+// tablet
+@media screen and (max-width:785px) {
+    main {
+        .Main-left {
+            display: none;
+        }
+
+        .Main-right {
+            width: 100%;
+
+            .Right-top {
+                height: 80px;
+                padding-left: 3%;
+            }
+
+            .Right-center {
+                height: 650px;
+                flex-direction: column;
+
+                .Charts {
+                    width: 100%;
+                    padding: 0 1%;
+                }
+
+                .Stats {
+                    width: 100%;
+                }
+            }
+
+            .Right-bottom {
+                flex-direction: column;
+                height: 600px;
+                margin: 50px 0;
+
+                .Orders {
+                    width: 100%;
+                    margin-bottom: 50px;
+                }
+
+                .Platforms {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// mobile
+@media screen and (max-width:425px) {
+    main {
+        .Main-right {
+            .Right-center {
+                height: 1000px;
+
+                .Stats {
+                    margin-bottom: 100px;
+                }
+            }
+
+            .Right-bottom {
+                .Platforms {
+                    @include flex;
+                }
+            }
+        }
+    }
+}
