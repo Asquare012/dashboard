@@ -8,7 +8,7 @@ const Charts = () => {
       <div className="Chart-title">
         <div className="Title-left">Sales Trends</div>
         <div className="Title-right">
-          Sort by :{" "}
+          Sort by :
           <span>
             Weekly <img src={arrow} alt="arrow" height="13px" />
           </span>

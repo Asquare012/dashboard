@@ -21,17 +21,18 @@ nav {
             cursor: pointer;
             width: 100%;
             @include flex;
-            transition: transform 0.5s ease-in-out;
+            transition: transform 0.5s ease-in-out, border-right 0.1s ease-in-out;
 
-            &:first-child {
-                display: none;
-            }
-
-            &:nth-child(3) {
+            &:not(:first-child):hover,
+            &:not(:first-child):active {
                 border-right: 3px solid #262626;
             }
 
-            &:nth-child(10) {
+            &:nth-child(2) {
+                border-right: 3px solid #262626;
+            }
+
+            &:nth-child(9) {
                 margin-bottom: 100px;
             }
 

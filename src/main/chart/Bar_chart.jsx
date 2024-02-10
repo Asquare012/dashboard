@@ -8,7 +8,7 @@ class Barchart extends Component {
     this.state = {
       options: {
         chart: {
-          id: "basic-bar",
+          id: "Account-bar",
           background: "#ffffff",
           foreColor: "#737373",
         },
@@ -37,8 +37,11 @@ class Barchart extends Component {
       },
       series: [
         {
-          name: "series-1",
-          data: [60, 10, 20, 30, 40, 50, 60, 91, 30, 40, 45, 50],
+          name: "Amount",
+          data: [
+            9100, 6600, 4600, 3100, 2500, 5055, 7888, 4991, 5200, 4000, 9770,
+            5000,
+          ],
         },
       ],
     };

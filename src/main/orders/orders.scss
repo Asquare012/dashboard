@@ -61,11 +61,18 @@
 
 @media screen and (max-width:400px) {
     .Orders-container {
+        margin-left: 0;
+        padding-left: 0;
         height: 400px;
+        width: 100vw;
         overflow: scroll;
 
+        .Container-title {
+            padding-left: 2%;
+        }
+
         .Container-table {
-            width: 400px;
+            padding: 0 1%;
         }
     }
 }
